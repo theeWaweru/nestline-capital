@@ -27,6 +27,25 @@
   --opps-dusty-olive: #5867bb;
 }
 
+.w-layout-blockcontainer {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+  .w-layout-blockcontainer {
+    max-width: 728px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .w-layout-blockcontainer {
+    max-width: none;
+  }
+}
+
 body {
   background-color: var(--soft-white);
   color: var(--charcoal-gray);
@@ -59,7 +78,7 @@ h3 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 2.9rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.1em;
 }
 
@@ -152,7 +171,7 @@ figure {
 .nav-logo {
   z-index: 2;
   color: var(--dusty-olive);
-  width: 300px;
+  width: 280px;
   position: relative;
 }
 
@@ -199,7 +218,7 @@ figure {
   width: 100%;
   max-width: 1920px;
   height: 100vh;
-  padding-bottom: 1rem;
+  padding-bottom: 5vh;
   display: flex;
   position: relative;
 }
@@ -320,7 +339,9 @@ figure {
 .philosophy {
   grid-column-gap: 16.6667%;
   grid-row-gap: 16.6667%;
+  justify-content: space-between;
   display: flex;
+  position: relative;
 }
 
 .philosophy-image-div {
@@ -467,7 +488,7 @@ figure {
 }
 
 .assurance-section {
-  padding: 2rem 5% 10rem;
+  padding: 2rem 5% 8rem;
 }
 
 .assurance-div {
@@ -484,12 +505,13 @@ figure {
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
-  width: 33.3333%;
+  width: 41.6667%;
   display: flex;
 }
 
-.assurance-title {
-  font-size: 2.5rem;
+.vision-title {
+  font-size: 2rem;
+  line-height: 1.3em;
 }
 
 .button {
@@ -616,7 +638,6 @@ figure {
 
 .footer {
   z-index: 1;
-  color: #000;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -658,7 +679,6 @@ figure {
 }
 
 .the-contact-div {
-  color: #000;
   justify-content: space-between;
   width: 100%;
   min-width: 896px;
@@ -697,7 +717,7 @@ figure {
 }
 
 .line-div {
-  background-color: #000;
+  background-color: var(--soft-white);
   width: 100%;
   height: 3px;
   position: relative;
@@ -784,7 +804,6 @@ figure {
 .footer-links {
   grid-row-gap: 4px;
   opacity: 1;
-  color: #000;
   flex-direction: column;
   grid-template-rows: auto auto;
   grid-template-columns: auto;
@@ -926,6 +945,7 @@ figure {
   padding-right: 5%;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 .menu-wrap {
@@ -972,9 +992,10 @@ figure {
 }
 
 .footer-logo {
+  color: var(--dusty-olive);
   justify-content: center;
   align-items: center;
-  width: 180px;
+  width: 240px;
   padding-left: 2px;
   padding-right: 2px;
   display: flex;
@@ -1201,7 +1222,8 @@ figure {
 }
 
 .footer-div {
-  border-top: 1px solid #000;
+  border-top-style: solid;
+  border-top-width: 1px;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
@@ -1240,18 +1262,34 @@ figure {
 }
 
 .malindi-form-wrapper {
+  background-color: var(--sun-washed-beige);
+  color: var(--charcoal-gray);
+  border-radius: 20px;
   width: 80%;
   min-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .form-header {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
+  border-right: 1px solid #2222224d;
   flex-flow: column;
   justify-content: center;
   align-items: flex-start;
   padding: 1.5rem 4%;
+  display: flex;
+}
+
+.progress-container {
+  border-bottom: 1px solid #e9ddc71a;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 3rem 1rem;
   display: flex;
 }
 
@@ -1291,7 +1329,7 @@ figure {
 }
 
 .inner-project-last-section {
-  width: 100%;
+  width: 100vw;
   height: 80svh;
   padding-bottom: 10rem;
   position: relative;
@@ -1388,11 +1426,11 @@ figure {
 .projects-slide-content {
   text-align: center;
   flex-flow: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding-top: 6%;
-  padding-bottom: 6%;
+  padding-top: 16vh;
+  padding-bottom: 10vh;
   display: flex;
 }
 
@@ -1496,6 +1534,147 @@ figure {
   height: 14rem;
 }
 
+.card_heading {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.grid_wrapper {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  flex-flow: row;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  width: 100%;
+  display: flex;
+}
+
+.grid_text-wrap {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  color: #1e211e;
+  flex-flow: column;
+  display: flex;
+}
+
+.grid {
+  min-height: 100svh;
+  padding: 5rem 2%;
+}
+
+.grid_card {
+  border-radius: 24px;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 684px;
+  min-height: 600px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid_card.card_2 {
+  background-image: url('../images/Image_fx-85.webp');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
+  min-height: 800px;
+}
+
+.grid_card.card_4 {
+  background-image: url('../images/Image_fx-83.webp');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid_card.card_1 {
+  background-image: url('../images/Image_fx-84.webp');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
+}
+
+.grid_card.card_3 {
+  background-image: url('../images/home-hero.webp');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 800px;
+}
+
+.container-large {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-large.cc-large {
+  max-width: 90rem;
+}
+
+.left-wrap {
+  grid-column-gap: 72px;
+  grid-row-gap: 72px;
+  flex-flow: column;
+  display: flex;
+}
+
+.card_para {
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.card_para-wrap {
+  max-width: 28rem;
+  display: none;
+}
+
+.card_para-wrap.cc-32 {
+  max-width: 32rem;
+}
+
+.card_para-wrap.cc-35 {
+  max-width: 35rem;
+}
+
+.right_wrap {
+  grid-column-gap: 72px;
+  grid-row-gap: 72px;
+  flex-flow: column;
+  display: flex;
+}
+
+.card_inner-flex {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  flex-flow: column;
+  display: flex;
+}
+
+.card_inner-flex._2.hide-desk {
+  display: none;
+}
+
+.card_inner-flex._1 {
+  min-height: 752px;
+}
+
+.card_inner-flex.hide-desk {
+  display: none;
+}
+
+.body {
+  background-color: var(--charcoal-gray);
+  color: var(--soft-white);
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 4.2rem;
@@ -1516,6 +1695,10 @@ figure {
 
   li {
     font-size: 16px;
+  }
+
+  .nav-logo {
+    width: 240px;
   }
 
   .hero-content {
@@ -1548,8 +1731,27 @@ figure {
     font-size: .75rem;
   }
 
+  .philosophy-section {
+    padding-bottom: 8rem;
+  }
+
   .philosophy-content {
-    width: 50%;
+    grid-column-gap: 3.2rem;
+    grid-row-gap: 3.2rem;
+    width: 55%;
+  }
+
+  .philosophy-paragraph {
+    width: 100%;
+  }
+
+  .philosophy {
+    grid-column-gap: 8%;
+    grid-row-gap: 8%;
+  }
+
+  .philosophy-image-div {
+    width: 45%;
   }
 
   .inner-project-hero-title {
@@ -1564,18 +1766,41 @@ figure {
     width: 100%;
   }
 
+  .idea-title-div {
+    width: 60%;
+  }
+
+  .idea-one-title {
+    font-size: 2.6rem;
+  }
+
+  .assurance-section {
+    padding-bottom: 6rem;
+  }
+
   .assurance {
     width: 68%;
   }
 
-  .assurance-title {
-    font-size: 2.25rem;
+  .vision-title {
+    font-size: 1.7rem;
+  }
+
+  .swiper-slide {
+    padding-left: .6rem;
+  }
+
+  .point-two-div-two-content {
+    width: 80%;
+  }
+
+  .point-three-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
   .footer {
-    padding-bottom: 60px;
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-bottom: 40px;
   }
 
   .nav-bar {
@@ -1587,6 +1812,10 @@ figure {
     flex-direction: column;
     min-width: auto;
     margin-top: 60px;
+  }
+
+  .footer-db {
+    padding-bottom: 3rem;
   }
 
   .menu-divs {
@@ -1654,12 +1883,6 @@ figure {
     padding-right: 48px;
   }
 
-  ._100 {
-    width: 100vw;
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-
   .menu {
     display: none;
   }
@@ -1683,7 +1906,7 @@ figure {
   }
 
   .footer-logo {
-    width: 140px;
+    width: 180px;
   }
 
   .the-contact-div-side-a {
@@ -1769,6 +1992,17 @@ figure {
     min-width: auto;
   }
 
+  .inner-project-last-section {
+    height: 640px;
+  }
+
+  .inner-project-last-section-phone-image {
+    width: 240px;
+    min-width: auto;
+    height: 400px;
+    margin-left: 5%;
+  }
+
   .project-title {
     font-size: 6rem;
   }
@@ -1809,6 +2043,57 @@ figure {
   .menu-button-2 {
     width: 40px;
   }
+
+  .grid_wrapper {
+    flex-flow: column;
+  }
+
+  .grid_card {
+    width: 100%;
+    min-height: 520px;
+  }
+
+  .grid_card.card_2 {
+    min-height: 520px;
+  }
+
+  .grid_card.card_1 {
+    min-height: 560px;
+  }
+
+  .grid_card.card_3 {
+    min-height: 520px;
+  }
+
+  .left-wrap {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .card_para-wrap, .card_para-wrap.cc-32, .card_para-wrap.cc-35 {
+    max-width: none;
+  }
+
+  .right_wrap {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .card_inner-flex {
+    width: 100%;
+  }
+
+  .card_inner-flex._2.hide-desk {
+    display: flex;
+  }
+
+  .card_inner-flex.hide-tablet {
+    display: none;
+  }
+
+  .card_inner-flex.hide-desk {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1829,6 +2114,10 @@ figure {
     font-size: 60px;
   }
 
+  .nav-logo {
+    width: 180px;
+  }
+
   .hero-content {
     width: 100%;
   }
@@ -1844,6 +2133,53 @@ figure {
 
   .welcome-paragraph-div {
     width: 48%;
+  }
+
+  .welcome-title {
+    font-size: 2.2rem;
+  }
+
+  .philosophy-section {
+    padding-bottom: 6rem;
+  }
+
+  .philosophy-content {
+    z-index: 1;
+    grid-column-gap: 2.4rem;
+    grid-row-gap: 2.4rem;
+    width: 80%;
+    padding-bottom: 2rem;
+    position: relative;
+  }
+
+  .philosophy {
+    flex-flow: column;
+  }
+
+  .philosophy-image-div {
+    z-index: 0;
+    width: 65%;
+    height: 320px;
+  }
+
+  .philosophy-slider-arrow {
+    width: 40px;
+    height: 40px;
+    padding: 11px;
+    inset: 0% auto 0% -16px;
+  }
+
+  .philosophy-slider-arrow:hover {
+    background-color: var(--soft-white);
+  }
+
+  .philosophy-slider-arrow.philosophy-slider-arrow-right {
+    left: auto;
+    right: -16px;
+  }
+
+  .philosophy-slider-nav {
+    justify-content: center;
   }
 
   .inner-project-hero-title {
@@ -1865,16 +2201,43 @@ figure {
     width: 36%;
   }
 
-  .assurance {
-    width: 75%;
+  .idea-title-div {
+    width: 80%;
   }
 
-  .assurance-title {
-    font-size: 2rem;
+  .assurance-section {
+    padding-bottom: 4rem;
+  }
+
+  .assurance {
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+    width: 90%;
+  }
+
+  .vision-title {
+    font-size: 1.4rem;
   }
 
   .button {
     font-size: 1.15rem;
+  }
+
+  .swiper-slide {
+    padding-left: .4rem;
+  }
+
+  .spacer {
+    height: 3rem;
+  }
+
+  .point-two-div-two-content {
+    width: 90%;
+  }
+
+  .point-three-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .footer {
@@ -1884,12 +2247,17 @@ figure {
     padding-right: 36px;
   }
 
+  .div-block-62 {
+    display: flex;
+  }
+
   .nav-bar {
     padding-top: 40px;
   }
 
   .footer-db {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+    padding-bottom: 0;
     position: static;
   }
 
@@ -1964,12 +2332,11 @@ figure {
   }
 
   ._100 {
-    grid-column-gap: 12px;
-    grid-row-gap: 12px;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
     flex-direction: column;
-    grid-template-columns: 1fr 1fr;
-    padding-left: 36px;
-    padding-right: 36px;
+    grid-template-columns: 1fr;
+    display: flex;
   }
 
   .the-contact-section {
@@ -1986,15 +2353,6 @@ figure {
   .btn {
     grid-row-gap: 4px;
     width: 24px;
-  }
-
-  .db-0.bd {
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-
-  .db-0.db {
-    flex-direction: row;
   }
 
   .db-0.dbd {
@@ -2072,6 +2430,30 @@ figure {
     flex-flow: column;
   }
 
+  .point-three-header {
+    width: 80%;
+    margin-left: 8%;
+  }
+
+  .point-three-header.point-three-header-b {
+    margin-left: 8%;
+  }
+
+  .inner-project-last-section {
+    height: 540px;
+  }
+
+  .inner-project-last-section-phone-image {
+    width: 35vw;
+    height: 58vw;
+    margin-left: 1%;
+    top: 0;
+  }
+
+  .inner-project-last-section-phone-image.inner-project-last-section-phone-image-3 {
+    left: 15%;
+  }
+
   .project-title {
     font-size: 5rem;
   }
@@ -2085,12 +2467,34 @@ figure {
     width: 25%;
   }
 
-  .container {
-    padding: 70px 20px;
-  }
-
   .logo {
     width: 160px;
+  }
+
+  .grid_card {
+    min-height: 440px;
+  }
+
+  .grid_card.card_2 {
+    width: auto;
+    min-height: 460px;
+  }
+
+  .grid_card.card_4 {
+    width: auto;
+  }
+
+  .grid_card.card_1 {
+    width: auto;
+    min-height: 460px;
+  }
+
+  .grid_card.card_3 {
+    min-height: 460px;
+  }
+
+  .philosophy-title {
+    width: 80%;
   }
 }
 
@@ -2116,6 +2520,10 @@ figure {
     list-style-type: decimal;
   }
 
+  .nav-logo {
+    width: 50vw;
+  }
+
   .welcome-content {
     grid-column-gap: 3rem;
     grid-row-gap: 3rem;
@@ -2135,6 +2543,25 @@ figure {
     font-size: .67rem;
   }
 
+  .philosophy-section {
+    padding-bottom: 4rem;
+  }
+
+  .philosophy-content {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    width: 100%;
+  }
+
+  .philosophy-image-div {
+    width: 100%;
+    inset: auto 0% 0% auto;
+  }
+
+  .philosophy-slider-arrow {
+    bottom: -85px;
+  }
+
   .inner-project-hero-title {
     font-size: 3.6rem;
   }
@@ -2152,17 +2579,66 @@ figure {
     width: 45%;
   }
 
-  .assurance {
+  .idea-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .idea-title-div {
     width: 100%;
   }
 
-  .assurance-title {
-    font-size: 1.8rem;
+  .assurance-section {
+    padding-bottom: 2rem;
+  }
+
+  .assurance {
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .vision-title {
+    font-size: 1.2rem;
+  }
+
+  .point-two-section {
+    grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
+    flex-flow: column;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .point-two-div-one {
+    width: 100%;
+  }
+
+  .point-two-div-two {
+    grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
+    width: 100%;
+  }
+
+  .point-two-div-two-content {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .point-three-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .footer {
     padding-left: 24px;
     padding-right: 24px;
+  }
+
+  .footer-db {
+    margin-bottom: 2rem;
   }
 
   .menu-divs {
@@ -2190,8 +2666,8 @@ figure {
   }
 
   ._100 {
-    padding-left: 24px;
-    padding-right: 24px;
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 1.25rem;
   }
 
   .menu {
@@ -2214,6 +2690,11 @@ figure {
 
   .db-0 {
     height: auto;
+  }
+
+  .db-0.db {
+    grid-column-gap: .25rem;
+    grid-row-gap: .25rem;
   }
 
   .the-contact-div-side-a {
@@ -2243,6 +2724,26 @@ figure {
     padding-right: 24px;
   }
 
+  .point-three-header {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .point-three-header.point-three-header-b {
+    margin-left: 0%;
+  }
+
+  .inner-project-last-section {
+    overflow: hidden;
+  }
+
+  .inner-project-last-section-phone-image {
+    border-radius: 12px;
+    width: 50vw;
+    height: 75vw;
+    right: 3rem;
+  }
+
   .project-title {
     font-size: 3.6rem;
   }
@@ -2258,6 +2759,37 @@ figure {
 
   .logo {
     width: 36vw;
+  }
+
+  .card_heading {
+    font-size: 1.25rem;
+  }
+
+  .grid_card {
+    min-height: 360px;
+  }
+
+  .grid_card.card_2 {
+    min-height: 400px;
+  }
+
+  .grid_card.card_4 {
+    background-position: 80%;
+    background-size: cover;
+  }
+
+  .grid_card.card_1 {
+    background-position: 15%;
+    min-height: 400px;
+  }
+
+  .grid_card.card_3 {
+    background-position: 10%;
+    min-height: 400px;
+  }
+
+  .philosophy-title {
+    width: 100%;
   }
 }
 
